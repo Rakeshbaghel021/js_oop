@@ -75,10 +75,10 @@ let user = {
   }
 };
 
-user.foo(); // Output
+user.foo(); // simple function call
 let fun1 = user.foo1;
-fun1(); // Output ??
-user.foo1(); // Output ??
+fun1(); // Output true
+user.foo1(); // Output false
 
 //this will call apply and bind
 
@@ -90,13 +90,13 @@ var module = {
   }
 };
 
-module.getX(); // Output ??
+module.getX(); // Output 81
 
 var retrieveX = module.getX;
-retrieveX(); //Output ??
+retrieveX(); //Output 9
 
 var boundGetX = retrieveX.bind(module);
-boundGetX(); // Output ??
+boundGetX(); // Output 81
 
 // Call with new constructor
 
