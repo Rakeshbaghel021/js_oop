@@ -66,9 +66,11 @@ sandra.greet(); //-> Logs 'hello'
 
 /*** CHALLENGE 3 of 3 ***/
 
-// add code here
+personStore.introduce=function(){
+  console.log("Hi, my name is [name]");
+}
 
-// sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
+sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
 
 
