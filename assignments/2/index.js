@@ -83,7 +83,9 @@ sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 /*** CHALLENGE 1 of 3 ***/
 
 function PersonConstructor() {
-	// add code here
+	this.greet=function(){
+    console.log("hello");
+  }
 
 
 }
@@ -91,7 +93,7 @@ function PersonConstructor() {
 
 // /********* Uncomment this line to test your work! *********/
 var simon = new PersonConstructor;
-// simon.greet(); // -> Logs 'hello'
+simon.greet(); // -> Logs 'hello'
 
 
 
