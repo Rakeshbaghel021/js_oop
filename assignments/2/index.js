@@ -100,7 +100,7 @@ simon.greet(); // -> Logs 'hello'
 /*** CHALLENGE 2 of 3 ***/
 
 function personFromConstructor(name, age) {
-	// add code here
+	
 
 
 }
@@ -129,20 +129,19 @@ var mike = personFromConstructor('Mike', 30);
 /*** CHALLENGE 1 of 3 ***/
 
 class PersonClass {
-	constructor() {
-    // add code here
-
-
-	}
-
-	// add code here
+	constructor(name) {
+    this.name=name;
+    }
+    greet(){
+      console.log("hello");
+    }
 
 }
 
 
 // /********* Uncomment this line to test your work! *********/
 var george = new PersonClass;
-// george.greet(); // -> Logs 'hello'
+george.greet(); // -> Logs 'hello'
 
 
 
