@@ -1,24 +1,24 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); // true
 
-console.log(this === window); //Output
+console.log(this === window); //true
 
 var myFunction = function() {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // window
 
 function f1() {
   "use strict";
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); //false
 
 function foo() {
   console.log("Simple function call");
   console.log(this === window);
 }
 
-foo(); //Output ??
+foo(); //simple function call  true
 console.log(this === window)(
   // Output
 
@@ -110,11 +110,12 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName(); // Output
+person.displayName(); // Name: John Reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName(); // Output
+person2.displayName(); //  Name: Paul Adams
 
-person.displayName.call(person2); // Output ??
+person.displayName.call(person2); // Name: Paul Adams
+
 
 // Guess the output of the following
 
@@ -130,26 +131,26 @@ const obj = {
 obj.getThis3 = obj.getThis.bind(obj);
 obj.getThis4 = obj.getThis2.bind(obj);
 
-// Output
+// window
 obj.getThis();
 
-// Output
+// window
 obj.getThis.call(a);
 
-// Output
+// {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 obj.getThis2();
 
-// Output
+// {a: "a"}
 obj.getThis2.call(a);
 
-// Output
+// window
 obj.getThis3();
 
-// Output
+// window
 obj.getThis3.call(a);
 
-// Output
+// {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 obj.getThis4();
 
-// Output
+// {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 obj.getThis4.call(a);
