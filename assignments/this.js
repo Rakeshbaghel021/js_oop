@@ -20,7 +20,7 @@ function foo() {
 
 foo(); //simple function call  true
 console.log(this === window)(
-  // Output
+  // true
 
   // This for IIFE
   function() {
