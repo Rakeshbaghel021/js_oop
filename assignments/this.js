@@ -36,7 +36,7 @@ function foo() {
   console.log(this === window);
 }
 
-foo(); // Output
+foo(); // simple call function...false
 
 var myObject = {};
 myObject.someMethod = function() {
