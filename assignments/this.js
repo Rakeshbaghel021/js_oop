@@ -77,8 +77,8 @@ let user = {
 
 user.foo(); // simple function call
 let fun1 = user.foo1;
-fun1(); // Output true
-user.foo1(); // Output false
+fun1(); //  true
+user.foo1(); //  false
 
 //this will call apply and bind
 
