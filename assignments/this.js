@@ -56,9 +56,9 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName(); // Output
+person.displayName(); // Name: John Reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName(); // Output
+person2.displayName(); //Name: Paul Adams
 
 //This refers to the invoker Object
 function foo() {
